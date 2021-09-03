@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+.gaming-font{
+    font-family: 'Press Start 2P', cursive;
+}
+
+.tube-text-red{
+    position: relative;
+    letter-spacing: 15px;
+    color: rgb(92, 1, 1);
+    text-transform: uppercase;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0008);
+    line-height: 0.70em;
+    outline: none;
+    animation: animate-red 5s linear infinite;
+}
+.tube-text-blue{
+    position: relative;
+    letter-spacing: 15px;
+    color: rgb(1, 74, 92);
+    text-transform: uppercase;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0008);
+    line-height: 0.70em;
+    outline: none;
+    animation: animate-blue 5s linear infinite;
+}
+.tube-text-yellow{
+    position: relative;
+    letter-spacing: 15px;
+    color: rgb(114, 112, 3);
+    text-transform: uppercase;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0008);
+    line-height: 0.70em;
+    outline: none;
+    animation: animate-yellow 5s linear infinite;
+}
+.tube-text-green{
+    position: relative;
+    letter-spacing: 15px;
+    color: rgb(3, 114, 58);
+    text-transform: uppercase;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0008);
+    line-height: 0.70em;
+    outline: none;
+    animation: animate-green 5s linear infinite;
+}
+.tube-text-pink{
+    position: relative;
+    letter-spacing: 15px;
+    color: rgb(114, 3, 108);
+    text-transform: uppercase;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0008);
+    line-height: 0.70em;
+    outline: none;
+    animation: animate-pink 5s linear infinite;
+}
+.road{
+    position: relative;
+    width: 800px;
+    height: 160px;
+    background-color: #525252;
+    margin: auto;
+    transform-origin: bottom;
+    transform-style: preserve-3d;
+    transform: perspective(500px) rotateX(30deg);
+}
+.road::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 10px;
+    background: linear-gradient(90deg, #fff 0%, #fff 70%, #525252 70%, #525252 100%);
+    background-size: 120px;
+    animation-name: animate-road 0.4s linear infinite;
+}
+.road::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    background: #333;
+    bottom: -30px;
+    transform-origin: top;
+    transform: perspective(500px) rotateX(-25deg);
+}
+.shadow{
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    height: 60px;
+    background: linear(#000, transparent);
+}
+.pappu{
+    height: 150px;
+    transform: perspective(500px) rotateX(-25deg), translateY(-150px);
+    animation: animate-pappu 1s infinite;
+}
+@keyframes animate-red {
+    0%{
+        color:rgb(92, 1, 1);
+        box-shadow: none;
+    }
+    18.1%, 20.1%, 20%, 50%, 60.1%, 65%, 100%{
+        color: #fff;
+        text-shadow: 0 0 10px rgb(204, 17, 48),
+        0 0 20px rgb(204, 17, 48),
+        0 0 40px rgb(204, 17, 48),
+        0 0 80px rgb(204, 17, 48),
+        0 0 160px rgb(204, 17, 48);
+    }
+}
+@keyframes animate-blue {
+    0%{
+        color:rgb(1, 74, 92);
+        box-shadow: none;
+    }
+    18.1%, 20.1%, 20%, 50%, 60.1%, 65%, 100%{
+        color: #fff;
+        text-shadow: 0 0 10px rgb(17, 167, 204),
+        0 0 20px rgb(17, 167, 204),
+        0 0 40px rgb(17, 167, 204),
+        0 0 80px rgb(17, 167, 204),
+        0 0 160px rgb(17, 167, 204);
+    }
+}
+@keyframes animate-yellow {
+    0%{
+        color:rgb(114, 112, 3);
+        box-shadow: none;
+    }
+    18.1%, 20.1%, 20%, 50%, 60.1%, 65%, 100%{
+        color: #fff;
+        text-shadow: 0 0 10px rgb(233, 229, 18),
+        0 0 20px rgb(233, 229, 18),
+        0 0 40px rgb(233, 229, 18),
+        0 0 80px rgb(233, 229, 18),
+        0 0 160px rgb(233, 229, 18);
+    }
+}
+@keyframes animate-green {
+    0%{
+        color:rgb(3, 114, 58);
+        box-shadow: none;
+    }
+    18.1%, 20.1%, 20%, 50%, 60.1%, 65%, 100%{
+        color: #fff;
+        text-shadow: 0 0 10px rgb(54, 233, 18),
+        0 0 20px rgb(54, 233, 18),
+        0 0 40px rgb(54, 233, 18),
+        0 0 80px rgb(54, 233, 18),
+        0 0 160px rgb(54, 233, 18);
+    }
+}
+@keyframes animate-pink {
+    0%{
+        color:rgb(114, 3, 108);
+        box-shadow: none;
+    }
+    18.1%, 20.1%, 20%, 50%, 60.1%, 65%, 100%{
+        color: #fff;
+        text-shadow: 0 0 10px rgb(197, 18, 233),
+        0 0 20px rgb(197, 18, 233),
+        0 0 40px rgb(197, 18, 233),
+        0 0 80px rgb(197, 18, 233),
+        0 0 160px rgb(197, 18, 233);
+    }
+}
+@keyframes animate-road{
+    0%{
+        background-position: 0px;
+    }
+    100%{
+        background-position: -120px;
+    }
+}
+@keyframes animate-pappu{
+    from{
+        background-position: 0;
+    }
+    to{
+        background-position: -1536px;
+    }
+}
